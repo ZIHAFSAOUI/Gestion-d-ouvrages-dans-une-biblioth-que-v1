@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favico/android-chrome-512x512.png" type="image/x-icon">
+    <title>Biblio</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container">
+                <!-- name of the author -->
+
+                <form action="process.php" method="post"></form>
+                <label for="Auteur">L'auteur :</label>
+                <input type="text" name="auteur" maxlength="30" placeholder="Nom de l'auteur">
+
+                <!-- date -->
+
+                <label for="checkin-date">Date: </label>
+                <input type="date" id="date">
+
+                <!-- title -->
+
+                <form action="process.php" method="post"></form>
+                <label for="titre">Titre :</label>
+                <input type="text" name="titre" maxlength="30" placeholder="Titre de livre">
+
+                <!-- language -->
+
+                <label for="langue">Choisir une langue :</label>
+                <select id="langue" name="langue">
+                    <option value="Arabe">Arabe</option>
+                    <option value="Français">Français</option>
+                    <option value="Anglais">Anglais</option>
+                    <option value="Espagnol">Espagnol</option>
+                </select>
+
+                <!-- books gender -->
+
+                <label for="type">Type :</label>
+                <select id="type" name="type">
+                    <option value="Roman">Roman</option>
+                    <option value="Essai">Essai</option>
+                    <option value=" Bande-Dessinée">Bande-Dessinée</option>
+                </select>
+
+            </div>
+            <button type="submit" value="ajouter">Ajouter</button>
+
+
+            <br>
+            
+            <table>
+                <tr>
+                    <th>Titre</th>
+                    <th>Date de publication</th>
+                    <th>Auteur</th>
+                    <th>Prix</th>
+                    <th>Langue</th>
+                    <th>Type</th>
+                    <th>Option</th>
+                </tr>
+                
+                <tr>
+                    <td>Youtoubia</td>
+                    <td>1/10/2014</td>
+                    <td>Ahmed khalid Taoufik</td>
+                    <td>70MAD</td>
+                    <td>Arabe</td>
+                    <td>Roman</td>
+                    <td> <button type="submit" value="suprimer">suprimer</button>
+                        <button type="submit" value="modifier">Modifier</button>
+                    </td>
+                    
+                </tr>
+                
+            </table>
+            
+        </section>
+       
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
