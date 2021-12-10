@@ -5,89 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKTABA</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./favico/android-chrome-512x512.png" type="image/x-icon">
-    <title>Biblio</title>
 </head>
 
 <body>
-    <main>
-        <section>
-            <div class="container">
-                <!-- name of the author -->
+    <table>
+        <tr>
+            <!-- list of forms -->
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label for="titre">Titre :</label>
+                        <input type="text" name="titre" maxlength="30" placeholder="Titre de livre" id="titre" required>
 
-                <form action="process.php" method="post"></form>
-                <label for="Auteur">L'auteur :</label>
-                <input type="text" name="auteur" maxlength="30" placeholder="Nom de l'auteur">
+                    </div>
 
-                <!-- date -->
+                    <div>
 
-                <label for="checkin-date">Date: </label>
-                <input type="date" id="date">
+                        <label for="auteur">L'auteur :</label>
+                        <input type="text" name="auteur" maxlength="30" placeholder="Nom de l'auteur" id="auteur"
+                            required>
 
-                <!-- title -->
+                    </div>
+                    <div>
 
-                <form action="process.php" method="post"></form>
-                <label for="titre">Titre :</label>
-                <input type="text" name="titre" maxlength="30" placeholder="Titre de livre">
+                        <label for="prix">Prix :</label>
+                        <input type="phone" name="prix" maxlength="30" placeholder="Prix de livre" id="prix" required>
 
-                <!-- language -->
-
-                <label for="langue">Choisir une langue :</label>
-                <select id="langue" name="langue">
-                    <option value="Arabe">Arabe</option>
-                    <option value="Français">Français</option>
-                    <option value="Anglais">Anglais</option>
-                    <option value="Espagnol">Espagnol</option>
-                </select>
-
-                <!-- books gender -->
-
-                <label for="type">Type :</label>
-                <select id="type" name="type">
-                    <option value="Roman">Roman</option>
-                    <option value="Essai">Essai</option>
-                    <option value=" Bande-Dessinée">Bande-Dessinée</option>
-                </select>
-
-            </div>
-            <button type="submit" value="ajouter">Ajouter</button>
+                    </div>
 
 
-            <br>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Titre</th>
-                        <th>Date de publication</th>
-                        <th>Auteur</th>
-                        <th>Prix</th>
-                        <th>Langue</th>
-                        <th>Type</th>
-                        <th>Option</th>
-                    </tr>
-                </thead>
-                
-                <tr>
-                    <td>Youtoubia</td>
-                    <td>1/10/2014</td>
-                    <td>Ahmed khalid Taoufik</td>
-                    <td>70MAD</td>
-                    <td>Arabe</td>
-                    <td>Roman</td>
-                    <td> <button type="submit" value="suprimer">suprimer</button>
-                        <button type="submit" value="modifier">Modifier</button>
-                    </td>
-                    
-                </tr>
-                
-            </table>
-            
-        </section>
-       
-    </main>
+                    <div>
+                        <label for="langue">Choisir une langue :</label>
+                        <select name="langue" id="langue" required>
+                            <option value="Arabe">Arabe</option>
+                            <option value="Français">Français</option>
+                            <option value="Anglais">Anglais</option>
+                            <option value="Espagnol">Espagnol</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="type">Type :</label>
+                        <select name="type" id="type" required>
+                            <option value="Roman">Roman</option>
+                            <option value="Essai">Essai</option>
+                            <option value=" Bande-Dessinée">Bande-Dessinée</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Roman</label>
+                        <input type="radio" value="Roman" name="typeradio">
+
+                        <label>Essai</label>
+                        <input type="radio" value="Essai" name="typeradio">
+
+                        <label>Bande-Dessinée</label>
+                        <input type="radio" value=" Bande-Dessinée" name="typeradio">
+
+                    </div>
+                    <div>
+                        <label for="checkin-date">Date: </label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit"></input>
+                    </div>
+
+                </form>
+            </td>
+
+            <!-- table list of all records -->
+
+            <td>
+                <table class="list" id="infolist">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Auteur</th>
+                            <th>Prix</th>
+                            <th>Langue</th>
+                            <th>Type</th>
+                            <th>Date de publication</th>
+                            <th></th>
+                            <!--for edit and delete -->
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
     <script src="./script.js"></script>
 </body>
+
 </html>
