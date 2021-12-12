@@ -21,11 +21,12 @@ body{
   padding: 50px;
   z-index: 1;
   position: absolute;
+  
 }
 .show-nav{
   transform-origin: top left;
   transition : transform 0.8s linear ;
-  transform:rotate(-0deg);
+  transform:rotate(-90deg);
 
 }
 .circle-corner{
@@ -68,26 +69,40 @@ body{
   transform-origin: top left;
 }
 table {
+  
   align-items: center;
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   height: 0%;
+  filter: drop-shadow(0px 2px 2px #7fceb6dc);
 }
-
-
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+  border: 1px solid #292424;
   padding: 8px;
   text-align: center;
 }
 
-label{
-  margin-right: 60px;
+input[type=text],
+[type=phone],
+[type=date] {
+  border: 2px solid rgb(170, 170, 170);
+  border-radius: 4px;
+  width: 50%;
+  padding: 16px 20px;
+  font-size: 22px;
+  margin: 10px;
 }
-input, select{
-  margin-right: 90px ;
+select {
+  border: 2px solid rgb(170, 170, 170);
+  width: 50%;
+  padding: 16px 20px;
+  border-radius: 4px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  font-size: 22px;
+  margin: 5px;
 }
 tr:nth-child(even) {
   background-color: #9211116b;

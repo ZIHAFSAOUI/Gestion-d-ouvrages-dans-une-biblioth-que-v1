@@ -1,12 +1,4 @@
-const opens = document.getElementById('open');
-const closes = document.getElementById('close');
-const container = document.querySelector('.container');
-
-opens.addEventListener('click' ,()=>container.classList.add('show-nav'));
-closes.addEventListener('click',()=>container.classList.remove('show-nav'));
-
-
- 
+let selectedRow = null
 
 function onFormSubmit(){
     let formData = readFormData();
@@ -54,9 +46,9 @@ function resetForm(){
     document.getElementById("auteur").value = "";
     document.getElementById("prix").value = "";
     document.getElementById("langue").value = "";
-    document.getElementById("type").value = "";
+    document.querySelector("type").value = "";
     document.getElementById("date").value = ""; 
-    let selectedRow = null
+
 
 }
 function onEdit(td){
