@@ -25,7 +25,7 @@ body{
 }
 .show-nav{
   transform-origin: top left;
-  transition : transform 10s linear ;
+  transition : transform 5s linear ;
   transform:rotate(-90deg);
 
 }
