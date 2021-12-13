@@ -2,10 +2,10 @@ let selectedRow = null
 
 var open = document.getElementById('open');
 const close = document.getElementById('close');
-const container = document.getElementsByClassName('.container');
+const container = document.querySelector('.container');
 
-open.addEventListener("click",() => container.classlist.add('show-nav'))
-close.addEventListener("click",() => container.classlist.remove('show-nav'))
+open.addEventListener("click", () => container.classlist.add('show-nav'))
+close.addEventListener("click", () => container.classlist.remove('show-nav'))
 
 
 function onFormSubmit(){
