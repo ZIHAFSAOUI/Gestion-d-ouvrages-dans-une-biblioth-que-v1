@@ -4,9 +4,13 @@ var open = document.getElementById('open');
 const close = document.getElementById('close');
 const container = document.querySelector('.container');
 
-open.addEventListener("click", () => container.classlist.add('show-nav'))
-close.addEventListener("click", () => container.classlist.remove('show-nav'))
 
+function openFunction(){
+container.classList.add("show-nav")}
+function closeFunction (){
+
+    container.classList.remove('show-nav')
+}
 
 function onFormSubmit(){
     let formData = readFormData();

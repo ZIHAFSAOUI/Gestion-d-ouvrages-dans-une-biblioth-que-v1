@@ -36,8 +36,8 @@ body{
 
 }
 .circle{
-  background-color: #24282c;
-  filter: drop-shadow(0px 4px 4px #030303);
+  background-color: #24282c91;
+  filter: drop-shadow(0px 4px 4px #0303035d);
   height:300px;
   width: 300px;
   border-radius: 100%;
